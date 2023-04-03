@@ -1,7 +1,6 @@
 body {
     min-height: 100vh;
-    width: 100vw;
-   overflow-x: hidden;
+    width: 100vw;   
 }
 header, section, footer {
     max-width: 1280px;
@@ -254,8 +253,9 @@ h3{
        text-align: center;
     }
     .sectionfive{
-        display: flex;       
-        height: 462px;
+        display: flex;          
+        max-height: 462px;
+        height: 100%;
         margin: 0 auto;
         background-color: #F6F6F6;
         justify-content: center; 
@@ -422,14 +422,19 @@ h3{
         color: #F1CDB3;
     }
     @media (max-width: 768px) {
+        header,section, footer{
+            max-width: 768px;
+            width: 100%;
+            
+        }
         .sectionone{
             display: flex;
-            max-width: 768px; 
-            width: 100%;
             height: 1165px;
             justify-content: center;
             background-position: bottom;
             background-size: 70%;
+            margin-left: auto;
+            margin-right: auto;
         }
        .sectionone-content{
         max-width: 460px; 
@@ -439,4 +444,95 @@ h3{
         margin-left: auto;
         margin-right: auto;
        }
+       .sectiontwo{   
+        max-width: 768px;
+        max-height: 1048px; 
+        height: 100%;   
+        grid-template-columns: 0.5fr;
+        grid-template-rows: 1fr 1fr;         
+        align-items: center;
+        grid-template-areas: 
+        "a"
+        "b"
+        ;    
+           
+       }
+       .sectiontwo article{
+        grid-area: a;
+        max-width: 430px;
+        max-height: 380px; 
+        margin-top: 80px;                    
+       }
+       .sectiontwo h3{
+        margin-top: 0;
+       }
+       .sectiontwo div{
+        grid-area: b;
+        max-width: 300px;
+        max-height: 408px;
+        margin-bottom: 100px;
+       }
+       .woody{
+        display: none;
+       }
+       .slider{
+        max-width: 708px;
+        max-height: 697px;
+        justify-content: center;
+       }
+       .sectionthree{
+        margin-left: auto;
+        margin-right: auto;
+       }
+       .sectionfive{
+        max-height: 817px;
+        height: 100%;
+       }
+       
+       .donation-content-container{
+        max-height: 817px;
+        height: 100%;
+        max-width: 505px;
+        grid-template-columns: 0.8fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "aa"
+        "bb";
+        margin-top: 50px;
+        margin-bottom: 50px;
+        }
+        .donation-image{
+            margin-left: 0;
+            max-width: 505px;
+            max-height: 261px;
+            grid-area: bb;
+        }
+        .donation-container{
+            max-width: 380px;
+            max-height: 282px;
+            grid-area: aa;
+        }
+        .footer-first_item{
+            grid-area: aaa;
+        }
+        .footer-second_item{
+            grid-area: bbb;
+        }
+        .footer-third_items{          
+            grid-area: ccc;
+        }
+        .footer{
+            max-height: 639px;
+            height: 100%;
+        }
+        .footer-container{
+            max-height: 639px;
+            height: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: 
+            "aaa bbb"
+            "ccc ccc";
+            justify-content: center;
+        }
      }
